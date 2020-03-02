@@ -41,4 +41,13 @@ $ awk '{if ($2>1 || $3>1 || $4>1 || $5>1 || $6>1 || $7>1) print $0}' 16s_genus_m
 $ awk '{if ($2>5 || $3>5 || $4>5 || $5>5 || $6>5 || $7>5) print $0}' 16s_genus_matrix_perc_sort_only.txt > 16s_genus_matrix_perc_sort_only_fil5.txt; sed '1 d' 16s_genus_matrix_perc_sort_only_fil5.txt > 16s_genus_matrix_perc_sort_only_fil5_sinheader.txt
 
 # Graph in R
-r_graph_fixname.R
+
+r_graph_fixname.R  # for heatmaps
+
+MDS_chart_gh.R  # for MDS metrics charts
+
+r_barstacked_gh.R  # for bar stacked charts
+
+alpha_diversity_index_gh.R  # for alpha diversity estimate
+ 
+
