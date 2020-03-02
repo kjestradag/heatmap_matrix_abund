@@ -1,6 +1,6 @@
 # Pipeline for heatmap graphs generation:
 
-# 1 merging of tables
+# 1 merging of tables (classification obtained with parallelmeta)
 
 $ integrar_tablas.pl <species_matrix1.txt> <species_matrix2.txt> .. > 16s_species_matrix.txt
 
@@ -30,15 +30,8 @@ $ cut -d';' -f7 16s_species_matrix_perc_sort.txt > 16s_species_matrix_perc_sort_
 
 $ awk '{if ($2>0.1 || $3>0.1 || $4>0.1 || $5>0.1 || $6>0.1 || $7>0.1) print $0}' 16s_species_matrix_perc_sort_only.txt > 16s_species_matrix_perc_sort_only_fil0.1.txt; sed '1 d' 16s_species_matrix_perc_sort_only_fil0.1.txt > 16s_species_matrix_perc_sort_only_fil0.1_sinheader.txt
 
-$ awk '{if ($2>1 || $3>1 || $4>1 || $5>1 || $6>1 || $7>1) print $0}' 16s_species_matrix_perc_sort_only.txt > 16s_species_matrix_perc_sort_only_fil1.txt; sed '1 d' 16s_species_matrix_perc_sort_only_fil1.txt > 16s_species_matrix_perc_sort_only_fil1_sinheader.txt
-
-$ awk '{if ($2>5 || $3>5 || $4>5 || $5>5 || $6>5 || $7>5) print $0}' 16s_species_matrix_perc_sort_only.txt > 16s_species_matrix_perc_sort_only_fil5.txt; sed '1 d' 16s_species_matrix_perc_sort_only_fil5.txt > 16s_species_matrix_perc_sort_only_fil5_sinheader.txt
-
 $ awk '{if ($2>0.1 || $3>0.1 || $4>0.1 || $5>0.1 || $6>0.1 || $7>0.1) print $0}' 16s_genus_matrix_perc_sort_only.txt > 16s_genus_matrix_perc_sort_only_fil0.1.txt; sed '1 d' 16s_genus_matrix_perc_sort_only_fil0.1.txt > 16s_genus_matrix_perc_sort_only_fil0.1_sinheader.txt
 
-$ awk '{if ($2>1 || $3>1 || $4>1 || $5>1 || $6>1 || $7>1) print $0}' 16s_genus_matrix_perc_sort_only.txt > 16s_genus_matrix_perc_sort_only_fil1.txt; sed '1 d' 16s_genus_matrix_perc_sort_only_fil1.txt > 16s_genus_matrix_perc_sort_only_fil1_sinheader.txt
-
-$ awk '{if ($2>5 || $3>5 || $4>5 || $5>5 || $6>5 || $7>5) print $0}' 16s_genus_matrix_perc_sort_only.txt > 16s_genus_matrix_perc_sort_only_fil5.txt; sed '1 d' 16s_genus_matrix_perc_sort_only_fil5.txt > 16s_genus_matrix_perc_sort_only_fil5_sinheader.txt
 
 # Graph in R
 
