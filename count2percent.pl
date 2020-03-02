@@ -48,7 +48,6 @@ foreach my $key (sort keys %matrix){
 		my@key_values=split(',', $matrix{$key});
 		if ($key_values[$i] >0 ) {
 			my$new_abundance= sprintf "%.6f", ($key_values[$i]*100)/$suma_per_sample[$i];
-#			my$new_abundance= sprintf "%.6f", (($key_values[$i])/$suma_per_sample[$i]);
 			push(@new_vals, $new_abundance);
 		}else{
 			push(@new_vals, "0");
